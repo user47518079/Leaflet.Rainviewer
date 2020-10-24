@@ -26,7 +26,8 @@
 		var map = L.map('mapid', {}).setView([-33.956882,151.004498], 11);
 
 		// create the tile layer with correct attribution
-		var osmUrl = '//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+		//var osmUrl = '//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
+		var osmUrl = L.esri.tiledMapLayer("http://maps.six.nsw.gov.au/arcgis/rest/services/public/NSW_Imagery/MapServer", {}).addTo(map)
 		//var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
 		var osmAttrib = 'Map data © <a href="https://openstreetmap.org">OpenStreetMap</a> contributors';
 		var osm = new L.TileLayer(osmUrl, {

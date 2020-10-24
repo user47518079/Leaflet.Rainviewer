@@ -138,7 +138,7 @@ L.Control.Rainviewer = L.Control.extend({
     
     addLayer: function(ts) {
         if (!this.radarLayers[ts]) {
-            this.radarLayers[ts] = new L.TileLayer('https://tilecache.rainviewer.com/v2/radar/' + ts + '/256/{z}/{x}/{y}/2/1_1.png', {
+            this.radarLayers[ts] = new L.TileLayer('https://tilecache.rainviewer.com/v2/radar/' + ts + '/256/{z}/{x}/{y}/1/1_1.png', {
                 tileSize: 256,
                 opacity: 0.001,
 				transparent: true,

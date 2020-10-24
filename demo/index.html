@@ -28,13 +28,15 @@
 		// create the tile layer with correct attribution
 		var osmUrl = '//server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}';
 		//var osmUrl = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-		var osmAttrib = 'Map data © Esri contributors';
+		var osmAttrib = 'Map data © Esri - Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community';
 		var osm = new L.TileLayer(osmUrl, {	
 			minZoom: 2,
 			maxZoom: 18,
 			attribution: osmAttrib
 		});
 		map.addLayer(osm);
+		
+		
 
 		var rainviewer = L.control.rainviewer({
 			position: 'bottomleft',
